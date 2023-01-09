@@ -5,11 +5,11 @@
         </h2>
     </x-slot>
 
-    <form class="grid" action="{{route('shop.store')}}" method="post">
+    <form class="grid grid-cols-3 gap-3" action="{{route('shop.store')}}" method="post">
         @csrf
 
         <div class="my-3">
-            <x-jet-label for="title" value="عنوان" />
+            <x-jet-label for="title" value="عنوان فروشگاه" />
             <x-jet-input id="title" class="block mt-1 w-full" type="text" name="title" :value="old('title')" required autofocus />
         </div>
 
@@ -29,9 +29,25 @@
         </div>
 
         <div class="my-3">
-            <x-jet-label for="address" value="آدرس" />
-            <x-jet-input id="address" class="block mt-1 w-full" type="text-area" name="address" :value="old('address')" required/>
+            <x-jet-label for="email" value="ایمیل" />
+            <x-jet-input id="email" class="block mt-1 w-full" type="text" name="email" :value="old('email')" required/>
         </div>
-    </form>
+
+        <div class="my-3">
+            <x-jet-label for="username" value="نام کاربری" />
+            <x-jet-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required/>
+        </div>
+        <div class="my-3 col-span-3">
+            <x-jet-label for="address" value="آدرس"/>
+            <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required/>
+        </div>
+
+        <div class="col-start-2 col-end-3">
+            <div class="flex justify-center">
+                <x-jet-button class="mr-4"> ذخیره </x-jet-button>
+            </div>
+        </div>
+
+</form>
 
 </x-app-layout>
