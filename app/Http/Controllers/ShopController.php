@@ -27,7 +27,16 @@ class ShopController extends Controller
 
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'title' => 'required|string|unique:shops,title|between:3,100',
+            'first_name' => 'required|string',
+            'last_name' => 'required|string',
+            'phone' => 'required|string|size:11',
+            'email' => 'required|email',
+            'username' => 'required|unique:users,name',
+            'address' => 'nullable',
+
+        ]);
     }
 
 

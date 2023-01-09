@@ -39,7 +39,7 @@
         </div>
         <div class="my-3 col-span-3">
             <x-jet-label for="address" value="آدرس"/>
-            <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required/>
+            <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')"/>
         </div>
 
         <div class="col-start-2 col-end-3">
