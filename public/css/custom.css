@@ -1,4 +1,11 @@
+@font-face {
+    font-family: 'IranYekan';
+    src: url(../fonts/iranyekan.woff);
+}
+
+
 body {
     direction: rtl;
     text-align: right;
+    font-family: 'IranYekan';
 }

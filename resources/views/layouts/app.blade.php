@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="{{asset('/css/custom.css')}}">
         @livewireStyles
     </head>
-    <body class="font-sans antialiased">
+    <body class="antialiased">
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
