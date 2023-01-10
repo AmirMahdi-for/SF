@@ -5,6 +5,7 @@
         </h2>
     </x-slot>
 
+
     <form class="grid grid-cols-3 gap-3" action="{{route('shop.store')}}" method="post">
         @csrf
 

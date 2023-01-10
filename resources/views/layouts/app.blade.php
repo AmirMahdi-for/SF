@@ -37,6 +37,9 @@
             <main><div class="py-12">
                 <div class="max-w-7xl mx-auto sm:px-2 lg:px-4">
                     <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-4">
+                        <x-jet-validation-errors class="mb-6" />
+                    </div>
+                    <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-4">
                         {{ $slot }}
                     </div>
                 </div>
