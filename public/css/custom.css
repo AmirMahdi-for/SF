@@ -9,3 +9,20 @@ body {
     text-align: right;
     font-family: 'IranYekan';
 }
+
+table {
+    width: 100%;
+    border-radius: 15px;
+}
+
+th, td {
+    padding: 10px;
+}
+
+table, th, td {
+    border: 1px solid #374157;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: #E5E7DB;
+}
