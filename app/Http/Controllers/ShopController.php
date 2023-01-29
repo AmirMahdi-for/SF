@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Shop;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Notification\NewShop;
 
 class ShopController extends Controller
 {
@@ -61,6 +62,10 @@ class ShopController extends Controller
             'phone' => $request->phone,
             'address' => $request->address,
         ]);
+
+        //-------------- User Notification --------------------
+
+        $user->notify(new NewShop);
 
         // ------------- Return Function -----------------------
 
