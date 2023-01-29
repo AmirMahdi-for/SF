@@ -30,9 +30,9 @@
                     <tr>
                         <th>{{$key+1}}</th>
                         <td>{{$shop->title}}</td>
-                        <td>{{$shop->first_name}} {{$shop->last_name}}</td>
+                        <td>{{$shop->full_name}}</td>
                         <td>{{$shop->phone}}</td>
-                        <td>{{$shop->phone}}</td>
+                        <td>{{persianDate($shop->created_at)}}</td>
                     </tr>
                 @endforeach
             </tbody>
