@@ -40,6 +40,7 @@ class ShopController extends Controller
         ]);
 
         // ------------- create user in db -------------------
+
         $randomPass = rand(1000, 9999);
         $user = User::create([
             'name' => $request->username,
@@ -50,6 +51,7 @@ class ShopController extends Controller
         ]);
 
         // ------------- create shop in db --------------------
+        
         Shop::create([
             'user_id' => $user->id,
             'title' => $request->title,

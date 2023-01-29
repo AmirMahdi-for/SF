@@ -7,6 +7,7 @@
 
 
     <form class="grid grid-cols-3 gap-3" action="{{route('shop.store')}}" method="post">
+        
         @csrf
 
         <div class="my-3">
