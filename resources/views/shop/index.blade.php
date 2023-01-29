@@ -22,6 +22,8 @@
                     <th> عنوان </th>
                     <th> نام </th>
                     <th> تلفن </th>
+                    <th> ایمیل </th>
+                    <th> نام کاریری </th>
                     <th> تاریخ شروع </th>
                 </tr>
             </thead>
@@ -32,6 +34,8 @@
                         <td>{{$shop->title}}</td>
                         <td>{{$shop->full_name}}</td>
                         <td>{{$shop->phone}}</td>
+                        <td>{{$shop->user->email ?? '-'}}</td>
+                        <td>{{$shop->user->name ?? '-'}}</td>
                         <td>{{persianDate($shop->created_at)}}</td>
                     </tr>
                 @endforeach
