@@ -24,7 +24,8 @@ class ShopController extends Controller
 
     public function create()
     {
-        return view('shop.create');
+        $shop = new Shop;
+        return view('shop.form', compact('shop'));
     }
 
 
@@ -81,18 +82,30 @@ class ShopController extends Controller
 
     public function edit(Shop $shop)
     {
-        //
+        return view('shop.form', compact('shop'));
     }
 
 
     public function update(Request $request, Shop $shop)
     {
-        //
+        $data = $request->validate([
+            'title' => 'required|string|unique:shops,title|between:3,100'.$shop->id,
+            'first_name' => 'required|string',
+            'last_name' => 'required|string',
+            'phone' => 'required|string|size:11',
+            'address' => 'nullable',
+        ]);
+
+        $shop->update($data);
+        return redirect()->route('shop.index')->withMessage('Save is successful');
+
     }
 
 
     public function destroy(Shop $shop)
     {
-        //
+        User::where('id', $shop->user_id)->delete();
+        $shop->delete();
+        return redirect()->route('shop.index')->withMessage('Your Item is Delete');
     }
 }
