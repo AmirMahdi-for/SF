@@ -60,6 +60,10 @@ class ShopController extends Controller
             'phone' => $request->phone,
             'address' => $request->address,
         ]);
+
+        // ------------- Return Function -----------------------
+
+        return redirect()->route('shop.index')->withMessage('Save is successful');
     }
 
 
